@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body onload="loadAdminDashboard()">
+
+
+<header class="admin-header">
+
+    <div class="logo">
+        ✈ Smart Tourism Management - Admin
+    </div>
+
+
+    <nav>
+
+        <a href="admin.html">Dashboard</a>
+        <a href="packages.html">Packages</a>
+        <a href="booking.html">Bookings</a>
+        <a href="index.html">Home</a>
+        <a href="login.html">Logout</a>
+
+    </nav>
+
+</header>
+
+
+
+<div class="container">
+
+
+<h2>Admin Dashboard</h2>
+
+
+
+<!-- Dashboard Cards -->
+
+<div class="cards">
+
+
+    <div class="card blue">
+
+        <h3>📦 Packages</h3>
+
+        <p id="packageCount">0</p>
+
+    </div>
+
+
+
+    <div class="card green">
+
+        <h3>👤 Tourists</h3>
+
+        <p id="touristCount">0</p>
+
+    </div>
+
+
+
+
+    <div class="card orange">
+
+        <h3>📝 Bookings</h3>
+
+        <p id="bookingCount">0</p>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- Add Package -->
+
+
+<div class="form-box">
+
+
+<h3>➕ Add New Package</h3>
+
+
+<input type="hidden" id="packageId">
+
+
+<input type="text" 
+id="packageName" 
+placeholder="Package Name">
+
+
+
+<input type="text" 
+id="location" 
+placeholder="Location">
+
+
+
+<input type="number" 
+id="price" 
+placeholder="Price">
+
+
+
+<textarea 
+id="description" 
+placeholder="Description">
+</textarea>
+
+
+
+<button onclick="addPackage()">
+Save Package
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Package List -->
+
+
+<div class="table-box">
+
+
+<h3>📦 Package List</h3>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Package Name</th>
+
+<th>Location</th>
+
+<th>Price</th>
+
+<th>Description</th>
+
+<th>Action</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="packageTable">
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Tourist List -->
+
+
+<div class="table-box">
+
+
+<h3>👤 Tourist List</h3>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Phone</th>
+
+<th>Destination</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="touristTable">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Admin Buttons -->
+
+
+<div class="admin-buttons">
+
+
+<button onclick="window.location.href='packages.html'">
+
+Manage Packages
+
+</button>
+
+
+
+<button onclick="window.location.href='booking.html'">
+
+View Bookings
+
+</button>
+
+
+
+<button onclick="window.location.href='index.html'">
+
+Back to Home
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

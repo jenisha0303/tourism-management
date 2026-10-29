@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Package</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tour Package Booking</h1>
+</header>
+
+<div class="container">
+
+    <h2>Book Your Tour</h2>
+
+    <form id="bookingForm">
+
+        <label>Tourist ID</label>
+        <input type="number" id="touristId" placeholder="Enter Tourist ID" required>
+
+        <label>Package ID</label>
+        <input type="number" id="packageId" placeholder="Enter Package ID" required>
+
+        <label>Booking Date</label>
+        <input type="date" id="bookingDate" required>
+
+        <button type="submit">Book Now</button>
+
+    </form>
+
+    <br>
+
+    <a href="packages.html">⬅ Back to Packages</a>
+
+</div>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const booking = {
+        touristId: parseInt(document.getElementById("touristId").value),
+        packageId: parseInt(document.getElementById("packageId").value),
+        bookingDate: document.getElementById("bookingDate").value
+    };
+
+    fetch("http://localhost:8087/bookings", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(booking)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Booking Successful!");
+        console.log(data);
+        window.location.href = "packages.html";
+    })
+    .catch(error => {
+        alert("Booking Failed!");
+        console.error(error);
+    });
+});
+</script>
+
+</body>
+</html>

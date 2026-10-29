@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="package-page">
+
+<header>
+    <h1>Tour Packages</h1>
+</header>
+
+<div class="container">
+<label><b>Select Place:</b></label>
+
+<select id="place" onchange="loadPackageByPlace()">
+    <option value="">-- Select Place --</option>
+    <option value="Ooty">Ooty</option>
+    <option value="Kodaikanal">Kodaikanal</option>
+    <option value="Goa">Goa</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Yercaud">Yercaud</option>
+    <option value="Kanyakumari">Kanyakumari</option>
+</select>
+
+<br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Package Name</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody id="packageTable">
+        </tbody>
+    </table>
+
+    <br>
+
+    <a href="booking.html">
+        <button>Book Package</button>
+    </a>
+
+    <br><br>
+
+    <a href="index.html">
+        <button>Home</button>
+    </a>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+</script>
+
+</body>
+</html>
