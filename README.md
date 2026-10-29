@@ -22,7 +22,7 @@ A complete Tourism Management System built using Java, Spring Boot, MySQL, HTML,
 2. Open in IntelliJ / Eclipse
 3. Configure MySQL in application.properties
 4. Run TourismManagementApplication.java
-5. Open browser: http://localhost:8080
+5. Open browser: http://localhost:8087
 
 ### 🎯 Learning Outcomes
 - Implemented MVC architecture with Spring Boot
